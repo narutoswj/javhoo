@@ -62,10 +62,10 @@ while count > 0:
     threads = []
     t1 = threading.Thread(target=Get_detail_url,args=(0,))
     threads.append(t1)
-    t2 = threading.Thread(target=Get_detail_url,args=(20,))
-    threads.append(t2)
-    t3 = threading.Thread(target=Get_detail_url,args=(40,))
-    threads.append(t3)
+    #t2 = threading.Thread(target=Get_detail_url,args=(20,))
+    #threads.append(t2)
+    #t3 = threading.Thread(target=Get_detail_url,args=(40,))
+    #threads.append(t3)
     #t4 = threading.Thread(target=Get_detail_url,args=(60,))#
     #threads.append(t4)
     #t5 = threading.Thread(target=Get_detail_url,args=(80,))
