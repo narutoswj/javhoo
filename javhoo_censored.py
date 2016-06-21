@@ -70,10 +70,10 @@ def SaveToMongo(url,page):
     #return True
 
 #count = 3100
-count = 2500
+count = 3100
 goon = True
 #while((count <= 3097) & (goon)):
-while((count <= 2500)):
+while((count >= 5)):
     threads = []
     t1 = threading.Thread(target=SaveToMongo,args=('https://www.javhoo.com/en/censored/page/',count,))
     threads.append(t1)
