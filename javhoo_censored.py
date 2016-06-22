@@ -69,31 +69,37 @@ def SaveToMongo(url,page):
             time.sleep(sleep_download_time)
     #return True
 
-#count = 3100
-count = 3100
-goon = True
-#while((count <= 3097) & (goon)):
-while((count >= 5)):
-    threads = []
-    t1 = threading.Thread(target=SaveToMongo,args=('https://www.javhoo.com/en/censored/page/',count,))
-    threads.append(t1)
-    count = count - 1
-    t2 = threading.Thread(target=SaveToMongo,args=('https://www.javhoo.com/en/censored/page/',count,))
-    threads.append(t2)
-    count = count - 1
-    t3 = threading.Thread(target=SaveToMongo,args=('https://www.javhoo.com/en/censored/page/',count,))
-    threads.append(t3)
-    count = count - 1
-    t4 = threading.Thread(target=SaveToMongo,args=('https://www.javhoo.com/en/censored/page/',count,))
-    threads.append(t4)
-    count = count - 1
-    t5 = threading.Thread(target=SaveToMongo,args=('https://www.javhoo.com/en/censored/page/',count,))
-    threads.append(t5)
-    count = count - 1
 
-    for t in threads:
-        t.setDaemon(True)
-        t.start()
-    t.join()
+def main(num):
+    # count = 3100
+    count = num
+    goon = True
+    # while((count <= 3097) & (goon)):
+    while ((count >= 5)):
+        threads = []
+        t1 = threading.Thread(target=SaveToMongo, args=('https://www.javhoo.com/en/censored/page/', count,))
+        threads.append(t1)
+        count = count - 1
+        t2 = threading.Thread(target=SaveToMongo, args=('https://www.javhoo.com/en/censored/page/', count,))
+        threads.append(t2)
+        count = count - 1
+        t3 = threading.Thread(target=SaveToMongo, args=('https://www.javhoo.com/en/censored/page/', count,))
+        threads.append(t3)
+        count = count - 1
+        t4 = threading.Thread(target=SaveToMongo, args=('https://www.javhoo.com/en/censored/page/', count,))
+        threads.append(t4)
+        count = count - 1
+        t5 = threading.Thread(target=SaveToMongo, args=('https://www.javhoo.com/en/censored/page/', count,))
+        threads.append(t5)
+        count = count - 1
+
+        for t in threads:
+            t.setDaemon(True)
+            t.start()
+        t.join()
+        print ('Next')
+
+
+main(2695)
 
 
