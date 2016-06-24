@@ -67,6 +67,7 @@ def SaveToMongo(url,page):
         except Exception ,e:
             print(url + '   ' + Series + "Exception: ",e)
             time.sleep(sleep_download_time)
+            success = True
     #return True
 
 
@@ -96,10 +97,11 @@ def main(num):
         for t in threads:
             t.setDaemon(True)
             t.start()
-        t.join()
+        for t in threads:
+            t.join()
         print ('Next')
 
-
-main(2695)
+#main(2700)
+main(620)
 
 
