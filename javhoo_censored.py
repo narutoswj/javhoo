@@ -102,6 +102,6 @@ def main(num):
         print ('Next')
 
 #main(2700)
-main(620)
+main(440)
 
 
